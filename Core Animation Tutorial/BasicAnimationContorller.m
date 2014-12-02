@@ -58,6 +58,29 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    if (indexPath.row==0) {
+        
+        [self performSegueWithIdentifier:@"s0" sender:self];
+        
+    }
+    else if (indexPath.row==1)
+        
+    {
+        [self performSegueWithIdentifier:@"s1" sender:self];
+    }
+    
+    else if (indexPath.row==2)
+        
+    {
+        [self performSegueWithIdentifier:@"s2" sender:self];
+    }
+    
+    
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
