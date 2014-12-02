@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E624A6B31A2E64CE001265E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E624A6B11A2E641C001265E7 /* QuartzCore.framework */; };
+		E624A6BB1A2E6AA1001265E7 /* SimpleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E624A6BA1A2E6AA1001265E7 /* SimpleVC.m */; };
+		E624A6BE1A2E71E3001265E7 /* OSU-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6BD1A2E71E3001265E7 /* OSU-logo.png */; };
 		E6A4138F1A2E2A96009E0333 /* BasicAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */; };
 		E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A413931A2E2B09009E0333 /* AdvancedAnimationContorller.m */; };
 		E6AB46EF1A2E170F00B0DDB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AB46EE1A2E170F00B0DDB6 /* Foundation.framework */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E624A6B11A2E641C001265E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E624A6B51A2E668E001265E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Base; path = Base.lproj/AnchorPointPic.h; sourceTree = "<group>"; };
+		E624A6B71A2E668E001265E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Base; path = Base.lproj/AnchorPointPic.m; sourceTree = "<group>"; };
+		E624A6B91A2E6AA1001265E7 /* SimpleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVC.h; sourceTree = "<group>"; };
+		E624A6BA1A2E6AA1001265E7 /* SimpleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleVC.m; sourceTree = "<group>"; };
+		E624A6BD1A2E71E3001265E7 /* OSU-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OSU-logo.png"; sourceTree = "<group>"; };
 		E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationContorller.h; sourceTree = "<group>"; };
 		E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationContorller.m; sourceTree = "<group>"; };
 		E6A413921A2E2B09009E0333 /* AdvancedAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedAnimationContorller.h; sourceTree = "<group>"; };
@@ -66,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E624A6B31A2E64CE001265E7 /* QuartzCore.framework in Frameworks */,
 				E6AB46F11A2E170F00B0DDB6 /* CoreGraphics.framework in Frameworks */,
 				E6AB46F31A2E170F00B0DDB6 /* UIKit.framework in Frameworks */,
 				E6AB46EF1A2E170F00B0DDB6 /* Foundation.framework in Frameworks */,
@@ -85,22 +95,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E6A413901A2E2A9C009E0333 /* BasicAnimation */ = {
+		E624A6B81A2E6A48001265E7 /* Simple Animation */ = {
 			isa = PBXGroup;
 			children = (
-				E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */,
-				E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */,
+				E624A6B91A2E6AA1001265E7 /* SimpleVC.h */,
+				E624A6BA1A2E6AA1001265E7 /* SimpleVC.m */,
 			);
-			name = BasicAnimation;
+			name = "Simple Animation";
 			sourceTree = "<group>";
 		};
-		E6A413911A2E2ABD009E0333 /* AdvancedAnimation */ = {
+		E624A6BC1A2E71D0001265E7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E624A6BD1A2E71E3001265E7 /* OSU-logo.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E6A413901A2E2A9C009E0333 /* Basic Animation */ = {
+			isa = PBXGroup;
+			children = (
+				E624A6B81A2E6A48001265E7 /* Simple Animation */,
+				E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */,
+				E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */,
+				E624A6B41A2E668E001265E7 /* AnchorPointPic.h */,
+				E624A6B61A2E668E001265E7 /* AnchorPointPic.m */,
+			);
+			name = "Basic Animation";
+			sourceTree = "<group>";
+		};
+		E6A413911A2E2ABD009E0333 /* Advanced Animation */ = {
 			isa = PBXGroup;
 			children = (
 				E6A413921A2E2B09009E0333 /* AdvancedAnimationContorller.h */,
 				E6A413931A2E2B09009E0333 /* AdvancedAnimationContorller.m */,
 			);
-			name = AdvancedAnimation;
+			name = "Advanced Animation";
 			sourceTree = "<group>";
 		};
 		E6AB46E21A2E170E00B0DDB6 = {
@@ -125,6 +155,7 @@
 		E6AB46ED1A2E170F00B0DDB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E624A6B11A2E641C001265E7 /* QuartzCore.framework */,
 				E6AB46EE1A2E170F00B0DDB6 /* Foundation.framework */,
 				E6AB46F01A2E170F00B0DDB6 /* CoreGraphics.framework */,
 				E6AB46F21A2E170F00B0DDB6 /* UIKit.framework */,
@@ -136,8 +167,9 @@
 		E6AB46F41A2E170F00B0DDB6 /* Core Animation Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				E6A413911A2E2ABD009E0333 /* AdvancedAnimation */,
-				E6A413901A2E2A9C009E0333 /* BasicAnimation */,
+				E624A6BC1A2E71D0001265E7 /* Images */,
+				E6A413911A2E2ABD009E0333 /* Advanced Animation */,
+				E6A413901A2E2A9C009E0333 /* Basic Animation */,
 				E6AB46FD1A2E170F00B0DDB6 /* AppDelegate.h */,
 				E6AB46FE1A2E170F00B0DDB6 /* AppDelegate.m */,
 				E6AB47001A2E170F00B0DDB6 /* Main.storyboard */,
@@ -254,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E624A6BE1A2E71E3001265E7 /* OSU-logo.png in Resources */,
 				E6AB47071A2E170F00B0DDB6 /* Images.xcassets in Resources */,
 				E6AB46F91A2E170F00B0DDB6 /* InfoPlist.strings in Resources */,
 				E6AB47021A2E170F00B0DDB6 /* Main.storyboard in Resources */,
@@ -279,6 +312,7 @@
 				E6AB46FF1A2E170F00B0DDB6 /* AppDelegate.m in Sources */,
 				E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */,
 				E6AB46FB1A2E170F00B0DDB6 /* main.m in Sources */,
+				E624A6BB1A2E6AA1001265E7 /* SimpleVC.m in Sources */,
 				E6A4138F1A2E2A96009E0333 /* BasicAnimationContorller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +336,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E624A6B41A2E668E001265E7 /* AnchorPointPic.h */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E624A6B51A2E668E001265E7 /* Base */,
+			);
+			name = AnchorPointPic.h;
+			sourceTree = "<group>";
+		};
+		E624A6B61A2E668E001265E7 /* AnchorPointPic.m */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E624A6B71A2E668E001265E7 /* Base */,
+			);
+			name = AnchorPointPic.m;
+			sourceTree = "<group>";
+		};
 		E6AB46F71A2E170F00B0DDB6 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
