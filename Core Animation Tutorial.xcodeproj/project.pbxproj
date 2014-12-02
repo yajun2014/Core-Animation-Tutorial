@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6A4138F1A2E2A96009E0333 /* BasicAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */; };
+		E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A413931A2E2B09009E0333 /* AdvancedAnimationContorller.m */; };
 		E6AB46EF1A2E170F00B0DDB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AB46EE1A2E170F00B0DDB6 /* Foundation.framework */; };
 		E6AB46F11A2E170F00B0DDB6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AB46F01A2E170F00B0DDB6 /* CoreGraphics.framework */; };
 		E6AB46F31A2E170F00B0DDB6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AB46F21A2E170F00B0DDB6 /* UIKit.framework */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationContorller.h; sourceTree = "<group>"; };
+		E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationContorller.m; sourceTree = "<group>"; };
+		E6A413921A2E2B09009E0333 /* AdvancedAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedAnimationContorller.h; sourceTree = "<group>"; };
+		E6A413931A2E2B09009E0333 /* AdvancedAnimationContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedAnimationContorller.m; sourceTree = "<group>"; };
 		E6AB46EB1A2E170F00B0DDB6 /* Core Animation Tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Animation Tutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6AB46EE1A2E170F00B0DDB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6AB46F01A2E170F00B0DDB6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +85,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6A413901A2E2A9C009E0333 /* BasicAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */,
+				E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */,
+			);
+			name = BasicAnimation;
+			sourceTree = "<group>";
+		};
+		E6A413911A2E2ABD009E0333 /* AdvancedAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E6A413921A2E2B09009E0333 /* AdvancedAnimationContorller.h */,
+				E6A413931A2E2B09009E0333 /* AdvancedAnimationContorller.m */,
+			);
+			name = AdvancedAnimation;
+			sourceTree = "<group>";
+		};
 		E6AB46E21A2E170E00B0DDB6 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +136,8 @@
 		E6AB46F41A2E170F00B0DDB6 /* Core Animation Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E6A413911A2E2ABD009E0333 /* AdvancedAnimation */,
+				E6A413901A2E2A9C009E0333 /* BasicAnimation */,
 				E6AB46FD1A2E170F00B0DDB6 /* AppDelegate.h */,
 				E6AB46FE1A2E170F00B0DDB6 /* AppDelegate.m */,
 				E6AB47001A2E170F00B0DDB6 /* Main.storyboard */,
@@ -251,7 +277,9 @@
 			files = (
 				E6AB47051A2E170F00B0DDB6 /* ViewController.m in Sources */,
 				E6AB46FF1A2E170F00B0DDB6 /* AppDelegate.m in Sources */,
+				E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */,
 				E6AB46FB1A2E170F00B0DDB6 /* main.m in Sources */,
+				E6A4138F1A2E2A96009E0333 /* BasicAnimationContorller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +484,7 @@
 				E6AB471F1A2E170F00B0DDB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6AB47201A2E170F00B0DDB6 /* Build configuration list for PBXNativeTarget "Core Animation TutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +493,7 @@
 				E6AB47221A2E170F00B0DDB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
