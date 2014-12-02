@@ -10,12 +10,21 @@
 
 @interface BasicAnimationContorller ()
 
+@property (strong,nonatomic) NSMutableArray *basicAnimationList;
+
+
 @end
 
 @implementation BasicAnimationContorller
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.basicAnimationList = [NSMutableArray arrayWithCapacity:5];
+    NSArray *myArray =@[@"Color",@"reflection",@"picturs"];
+    
+    self.basicAnimationList = [NSMutableArray arrayWithArray:myArray];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,22 +41,19 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 5;
+
+    return self.basicAnimationList.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicAnimation" forIndexPath:indexPath];
     
-    cell.textLabel.text=@"basicAnimation";
+    cell.textLabel.text= [self.basicAnimationList objectAtIndex:indexPath.row];
     
     return cell;
 }
