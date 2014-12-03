@@ -16,6 +16,9 @@
 		E624A6CB1A2FAC5D001265E7 /* Change Size.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6C61A2FAC5D001265E7 /* Change Size.png */; };
 		E624A6CC1A2FAC5D001265E7 /* Move Postion.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6C71A2FAC5D001265E7 /* Move Postion.png */; };
 		E624A6CE1A2FAD24001265E7 /* Change Color.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6CD1A2FAD24001265E7 /* Change Color.png */; };
+		E624A6D21A2FD089001265E7 /* ReflectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E624A6D11A2FD089001265E7 /* ReflectionVC.m */; };
+		E624A6D41A2FD228001265E7 /* Great Wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E624A6D31A2FD228001265E7 /* Great Wall.jpg */; };
+		E624A6D61A2FD306001265E7 /* Great Wall.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6D51A2FD306001265E7 /* Great Wall.png */; };
 		E6A4138F1A2E2A96009E0333 /* BasicAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */; };
 		E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A413931A2E2B09009E0333 /* AdvancedAnimationContorller.m */; };
 		E6AB46EF1A2E170F00B0DDB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AB46EE1A2E170F00B0DDB6 /* Foundation.framework */; };
@@ -58,6 +61,10 @@
 		E624A6C61A2FAC5D001265E7 /* Change Size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Change Size.png"; sourceTree = "<group>"; };
 		E624A6C71A2FAC5D001265E7 /* Move Postion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Move Postion.png"; sourceTree = "<group>"; };
 		E624A6CD1A2FAD24001265E7 /* Change Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Change Color.png"; sourceTree = "<group>"; };
+		E624A6D01A2FD089001265E7 /* ReflectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionVC.h; sourceTree = "<group>"; };
+		E624A6D11A2FD089001265E7 /* ReflectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionVC.m; sourceTree = "<group>"; };
+		E624A6D31A2FD228001265E7 /* Great Wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Great Wall.jpg"; sourceTree = "<group>"; };
+		E624A6D51A2FD306001265E7 /* Great Wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Great Wall.png"; sourceTree = "<group>"; };
 		E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationContorller.h; sourceTree = "<group>"; };
 		E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationContorller.m; sourceTree = "<group>"; };
 		E6A413921A2E2B09009E0333 /* AdvancedAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedAnimationContorller.h; sourceTree = "<group>"; };
@@ -120,6 +127,8 @@
 		E624A6BC1A2E71D0001265E7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E624A6D51A2FD306001265E7 /* Great Wall.png */,
+				E624A6D31A2FD228001265E7 /* Great Wall.jpg */,
 				E624A6CD1A2FAD24001265E7 /* Change Color.png */,
 				E624A6C31A2FAC5D001265E7 /* Change Corner.png */,
 				E624A6C41A2FAC5D001265E7 /* Change Opacity.png */,
@@ -139,9 +148,19 @@
 			name = " Implicit Animation";
 			sourceTree = "<group>";
 		};
+		E624A6CF1A2FD056001265E7 /* Reflection */ = {
+			isa = PBXGroup;
+			children = (
+				E624A6D01A2FD089001265E7 /* ReflectionVC.h */,
+				E624A6D11A2FD089001265E7 /* ReflectionVC.m */,
+			);
+			name = Reflection;
+			sourceTree = "<group>";
+		};
 		E6A413901A2E2A9C009E0333 /* Basic Animation */ = {
 			isa = PBXGroup;
 			children = (
+				E624A6CF1A2FD056001265E7 /* Reflection */,
 				E624A6BF1A2F9BBF001265E7 /*  Implicit Animation */,
 				E624A6B81A2E6A48001265E7 /* Simple Animation */,
 				E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */,
@@ -315,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E624A6BE1A2E71E3001265E7 /* OSU-logo.png in Resources */,
+				E624A6D61A2FD306001265E7 /* Great Wall.png in Resources */,
 				E624A6C81A2FAC5D001265E7 /* Change Corner.png in Resources */,
 				E624A6CB1A2FAC5D001265E7 /* Change Size.png in Resources */,
 				E624A6C91A2FAC5D001265E7 /* Change Opacity.png in Resources */,
@@ -322,6 +342,7 @@
 				E6AB46F91A2E170F00B0DDB6 /* InfoPlist.strings in Resources */,
 				E6AB47021A2E170F00B0DDB6 /* Main.storyboard in Resources */,
 				E624A6CC1A2FAC5D001265E7 /* Move Postion.png in Resources */,
+				E624A6D41A2FD228001265E7 /* Great Wall.jpg in Resources */,
 				E624A6CE1A2FAD24001265E7 /* Change Color.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +367,7 @@
 				E6AB46FF1A2E170F00B0DDB6 /* AppDelegate.m in Sources */,
 				E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */,
 				E6AB46FB1A2E170F00B0DDB6 /* main.m in Sources */,
+				E624A6D21A2FD089001265E7 /* ReflectionVC.m in Sources */,
 				E624A6BB1A2E6AA1001265E7 /* SimpleVC.m in Sources */,
 				E6A4138F1A2E2A96009E0333 /* BasicAnimationContorller.m in Sources */,
 			);
