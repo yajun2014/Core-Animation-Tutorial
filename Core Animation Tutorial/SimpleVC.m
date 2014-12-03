@@ -22,6 +22,7 @@
     [self myMove];
     [self myScale];
     [self myCombine];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -132,7 +133,7 @@
     scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
     CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
-    animationGroup.duration = 2.0f;
+    animationGroup.duration = 5.0f;
     animationGroup.autoreverses = YES;
     animationGroup.repeatCount = HUGE_VALF;
     [animationGroup setAnimations:[NSArray arrayWithObjects:rotationAnimation, scaleAnimation, nil]];
