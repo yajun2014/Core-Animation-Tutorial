@@ -10,6 +10,7 @@
 		E624A6B31A2E64CE001265E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E624A6B11A2E641C001265E7 /* QuartzCore.framework */; };
 		E624A6BB1A2E6AA1001265E7 /* SimpleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E624A6BA1A2E6AA1001265E7 /* SimpleVC.m */; };
 		E624A6BE1A2E71E3001265E7 /* OSU-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6BD1A2E71E3001265E7 /* OSU-logo.png */; };
+		E624A6C21A2F9C24001265E7 /* ImplicitAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E624A6C11A2F9C24001265E7 /* ImplicitAnimationVC.m */; };
 		E6A4138F1A2E2A96009E0333 /* BasicAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */; };
 		E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A413931A2E2B09009E0333 /* AdvancedAnimationContorller.m */; };
 		E6AB46EF1A2E170F00B0DDB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AB46EE1A2E170F00B0DDB6 /* Foundation.framework */; };
@@ -45,6 +46,8 @@
 		E624A6B91A2E6AA1001265E7 /* SimpleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVC.h; sourceTree = "<group>"; };
 		E624A6BA1A2E6AA1001265E7 /* SimpleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleVC.m; sourceTree = "<group>"; };
 		E624A6BD1A2E71E3001265E7 /* OSU-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OSU-logo.png"; sourceTree = "<group>"; };
+		E624A6C01A2F9C24001265E7 /* ImplicitAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationVC.h; sourceTree = "<group>"; };
+		E624A6C11A2F9C24001265E7 /* ImplicitAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationVC.m; sourceTree = "<group>"; };
 		E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationContorller.h; sourceTree = "<group>"; };
 		E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationContorller.m; sourceTree = "<group>"; };
 		E6A413921A2E2B09009E0333 /* AdvancedAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedAnimationContorller.h; sourceTree = "<group>"; };
@@ -112,9 +115,19 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		E624A6BF1A2F9BBF001265E7 /*  Implicit Animation */ = {
+			isa = PBXGroup;
+			children = (
+				E624A6C01A2F9C24001265E7 /* ImplicitAnimationVC.h */,
+				E624A6C11A2F9C24001265E7 /* ImplicitAnimationVC.m */,
+			);
+			name = " Implicit Animation";
+			sourceTree = "<group>";
+		};
 		E6A413901A2E2A9C009E0333 /* Basic Animation */ = {
 			isa = PBXGroup;
 			children = (
+				E624A6BF1A2F9BBF001265E7 /*  Implicit Animation */,
 				E624A6B81A2E6A48001265E7 /* Simple Animation */,
 				E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */,
 				E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */,
@@ -309,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6AB47051A2E170F00B0DDB6 /* ViewController.m in Sources */,
+				E624A6C21A2F9C24001265E7 /* ImplicitAnimationVC.m in Sources */,
 				E6AB46FF1A2E170F00B0DDB6 /* AppDelegate.m in Sources */,
 				E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */,
 				E6AB46FB1A2E170F00B0DDB6 /* main.m in Sources */,

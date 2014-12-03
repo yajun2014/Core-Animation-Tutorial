@@ -44,10 +44,7 @@
     self.myScaleLayer = nil;
     self.myMoveLayer = nil;
     self.myCombineLayer = nil;
-   
 }
-
-
 
 
 
@@ -152,7 +149,7 @@
     moveAnimation.repeatCount = NSNotFound;
     // Rotate animation
     CABasicAnimation* rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotationAnimation.toValue = [NSNumber numberWithFloat:7 * M_PI];
+    rotationAnimation.toValue = [NSNumber numberWithFloat:8 * M_PI];
     rotationAnimation.duration = 2;
     rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     // scale animation

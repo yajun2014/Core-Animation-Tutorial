@@ -24,7 +24,7 @@
     self.basicAnimationList = [NSMutableArray arrayWithCapacity:5];
     self.detailAnimationList = [NSMutableArray arrayWithCapacity:5];
     
-    NSArray *myArray =@[@"Simple Animation",@"reflection",@"picturs"];
+    NSArray *myArray =@[@"Simple Animation",@"Implicit Animation",@"picturs"];
     NSArray *myDetailArray =@[@"Rotate,Scale,Move and Combine Animation",@"reflection",@"picturs"];
     
     self.basicAnimationList = [NSMutableArray arrayWithArray:myArray];
