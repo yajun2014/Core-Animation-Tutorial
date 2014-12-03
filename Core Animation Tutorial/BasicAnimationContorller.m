@@ -11,6 +11,7 @@
 @interface BasicAnimationContorller ()
 
 @property (strong,nonatomic) NSMutableArray *basicAnimationList;
+@property (strong,nonatomic) NSMutableArray *detailAnimationList;
 
 
 @end
@@ -21,10 +22,13 @@
     [super viewDidLoad];
     
     self.basicAnimationList = [NSMutableArray arrayWithCapacity:5];
-    NSArray *myArray =@[@"Color",@"reflection",@"picturs"];
+    self.detailAnimationList = [NSMutableArray arrayWithCapacity:5];
+    
+    NSArray *myArray =@[@"Simple Animation",@"reflection",@"picturs"];
+    NSArray *myDetailArray =@[@"Rotate,Scale,Move and Combine Animation",@"reflection",@"picturs"];
     
     self.basicAnimationList = [NSMutableArray arrayWithArray:myArray];
-    
+    self.detailAnimationList = [NSMutableArray arrayWithArray:myDetailArray];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -54,7 +58,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basicAnimation" forIndexPath:indexPath];
     
     cell.textLabel.text= [self.basicAnimationList objectAtIndex:indexPath.row];
-    
+    cell.detailTextLabel.text=[self.detailAnimationList objectAtIndex:indexPath.row];
     return cell;
 }
 

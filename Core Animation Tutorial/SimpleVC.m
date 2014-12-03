@@ -19,8 +19,8 @@
     // Do any additional setup after loading the view.
     
     [self myRotate];
-    [self myMove];
     [self myScale];
+    [self myMove];
     [self myCombine];
     
 }
@@ -36,68 +36,36 @@
     
     CALayer *myLayer = [[CALayer alloc]init];
    // myLayer.backgroundColor = [[UIColor whiteColor]CGColor];
-    myLayer.frame = CGRectMake(80, 100, 80, 80);
-    myLayer.cornerRadius = 7;
+    myLayer.frame = CGRectMake(50, 110, 80, 80);
+    myLayer.cornerRadius = 2;
     UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
     myLayer.contents = (id)image.CGImage;
     [self.view.layer addSublayer:myLayer];
-    
     // Rotate over Z axis
-    CABasicAnimation *rotateAnimation  = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotateAnimation.fromValue = [NSNumber numberWithFloat:0.0];
-    rotateAnimation.toValue = [NSNumber numberWithFloat:2.0 * M_PI];
-    rotateAnimation.duration = 5;
-    rotateAnimation.repeatCount = NSNotFound;
-    [myLayer addAnimation:rotateAnimation forKey:@"myRotate"];
+    CABasicAnimation *myRotateAnimation  = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    myRotateAnimation .fromValue = [NSNumber numberWithFloat:0.0];
+    myRotateAnimation .toValue = [NSNumber numberWithFloat:2.0 * M_PI];
+    myRotateAnimation .duration = 5;
+    myRotateAnimation .repeatCount = NSNotFound;
+    [myLayer addAnimation:myRotateAnimation  forKey:@"myRotate"];
     
 }
 
-
-
-- (void)myMove
-{
-    
-    CALayer *myMoveLayer = [[CALayer alloc]init];
-  //  myMoveLayer.backgroundColor = [[UIColor blueColor]CGColor];
-    myMoveLayer.frame = CGRectMake(50, 205, 80, 80);
-    UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
-    myMoveLayer.contents = (id)image.CGImage;
-    myMoveLayer.cornerRadius = 5;
-    [self.view.layer addSublayer:myMoveLayer];
-    
-    // 移动kkLayer的position
-    CABasicAnimation *animation  = [CABasicAnimation animationWithKeyPath:@"position"];
-    animation.fromValue = [NSValue valueWithCGPoint:myMoveLayer.position];
-    CGPoint toPoint = myMoveLayer.position;
-    toPoint.x += 180;
-    toPoint.y += 80;
-    animation.toValue = [NSValue valueWithCGPoint:toPoint];
-    animation.autoreverses = YES;
-    animation.duration = 3;
-    animation.repeatCount = NSNotFound;
-    
-    [myMoveLayer addAnimation:animation forKey:@"myMove"];
-    
-}
 
 - (void)myScale
 
 {
     CALayer *myScaleLayer = [CALayer layer];
-    
-    myScaleLayer.frame = CGRectMake(80, 300, 80, 80);
-    myScaleLayer.cornerRadius = 7;
+    myScaleLayer.frame = CGRectMake(190, 110, 80, 80);
+    myScaleLayer.cornerRadius = 2;
     UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
     myScaleLayer.contents = (id)image.CGImage;
     [self.view.layer addSublayer:myScaleLayer];
-    
-    
-    
-    
+ 
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     scaleAnimation.fromValue = [NSNumber numberWithFloat:0.0];
     scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
-    scaleAnimation.duration = 2.0f;
+    scaleAnimation.duration = 3;
     scaleAnimation.autoreverses = YES;
     scaleAnimation.repeatCount = NSNotFound;
     scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
@@ -106,50 +74,76 @@
 
 
 
+
+- (void)myMove
+{
+    
+    CALayer *myMoveLayer = [[CALayer alloc]init];
+    myMoveLayer.frame = CGRectMake(50, 255, 80, 80);
+    UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
+    myMoveLayer.contents = (id)image.CGImage;
+    myMoveLayer.cornerRadius = 2;
+    [self.view.layer addSublayer:myMoveLayer];
+    // move Animation
+    CABasicAnimation *animation  = [CABasicAnimation animationWithKeyPath:@"position"];
+    CGPoint fromPoint = myMoveLayer.position;
+    fromPoint.x-=50;
+    fromPoint.y-=40;
+    animation.fromValue = [NSValue valueWithCGPoint:fromPoint];
+    CGPoint toPoint = myMoveLayer.position;
+    toPoint.x += 180;
+    toPoint.y += 40;
+    animation.toValue = [NSValue valueWithCGPoint:toPoint];
+    animation.autoreverses = YES;
+    animation.duration = 3;
+    animation.repeatCount = NSNotFound;
+    [myMoveLayer addAnimation:animation forKey:@"myMove"];
+    
+}
+
+
 - (void)myCombine{
     
-    
     CALayer *myCombineLayer = [CALayer layer];
-    
-    myCombineLayer.frame = CGRectMake(80, 350, 80, 80);
-   myCombineLayer.cornerRadius = 7;
+    myCombineLayer.frame = CGRectMake(50, 420, 80, 80);
+    myCombineLayer.cornerRadius = 2;
     UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
     myCombineLayer.contents = (id)image.CGImage;
     [self.view.layer addSublayer:myCombineLayer];
     
-    
-
+    // move position
+    CABasicAnimation *moveAnimation  = [CABasicAnimation animationWithKeyPath:@"position"];
+    CGPoint fromPoint = myCombineLayer.position;
+    fromPoint.x-=80;
+    fromPoint.y-=10;
+    moveAnimation.fromValue = [NSValue valueWithCGPoint:fromPoint];
+    CGPoint toPoint = myCombineLayer.position;
+    toPoint.x += 110;
+    toPoint.y += 10;
+    moveAnimation.toValue = [NSValue valueWithCGPoint:toPoint];
+    moveAnimation.autoreverses = YES;
+    moveAnimation.duration = 2;
+    moveAnimation.repeatCount = NSNotFound;
+    // Rotate animation
     CABasicAnimation* rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotationAnimation.toValue = [NSNumber numberWithFloat:(2 * M_PI) * 3]; // 3 is the number of 360 degree rotations
-    // Make the rotation animation duration slightly less than the other animations to give it the feel
-    // that it pauses at its largest scale value
-    rotationAnimation.duration = 1.9f;
+    rotationAnimation.toValue = [NSNumber numberWithFloat:7 * M_PI];
+    rotationAnimation.duration = 2;
     rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    
+    // scale animation
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     scaleAnimation.fromValue = [NSNumber numberWithFloat:0.0];
-    scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
-    scaleAnimation.duration = 2.0f;
+    scaleAnimation.toValue = [NSNumber numberWithFloat:1.5];
+    scaleAnimation.duration = 2;
     scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
-    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
-    animationGroup.duration = 5.0f;
-    animationGroup.autoreverses = YES;
-    animationGroup.repeatCount = HUGE_VALF;
-    [animationGroup setAnimations:[NSArray arrayWithObjects:rotationAnimation, scaleAnimation, nil]];
-    
-    [myCombineLayer addAnimation:animationGroup forKey:@"animationGroup"];
+    // combine all animations
+    CAAnimationGroup *animationCombine = [CAAnimationGroup animation];
+    animationCombine.duration = 2;
+    animationCombine.autoreverses = YES;
+    animationCombine.repeatCount = NSNotFound;
+    [animationCombine setAnimations:[NSArray arrayWithObjects:rotationAnimation, scaleAnimation,moveAnimation, nil]];
+    [myCombineLayer addAnimation:animationCombine forKey:@"animationCombine"];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
