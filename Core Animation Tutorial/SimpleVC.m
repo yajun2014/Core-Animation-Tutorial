@@ -9,21 +9,47 @@
 #import "SimpleVC.h"
 
 @interface SimpleVC ()
-
+@property (strong,nonatomic) CALayer *myLayer;
+@property (strong,nonatomic) CALayer *myScaleLayer;
+@property (strong,nonatomic) CALayer *myMoveLayer;
+@property (strong,nonatomic) CALayer *myCombineLayer;
 @end
 
 @implementation SimpleVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+
     [self myRotate];
     [self myScale];
     [self myMove];
     [self myCombine];
+
     
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+
+    [self.myLayer removeFromSuperlayer];
+    [self.myScaleLayer removeFromSuperlayer];
+    [self.myMoveLayer removeFromSuperlayer];
+    [self.myCombineLayer removeFromSuperlayer];
+    self.myLayer = nil;
+    self.myScaleLayer = nil;
+    self.myMoveLayer = nil;
+    self.myCombineLayer = nil;
+   
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -34,20 +60,20 @@
 - (void)myRotate
 {
     
-    CALayer *myLayer = [[CALayer alloc]init];
+    self.myLayer = [[CALayer alloc]init];
    // myLayer.backgroundColor = [[UIColor whiteColor]CGColor];
-    myLayer.frame = CGRectMake(50, 110, 80, 80);
-    myLayer.cornerRadius = 2;
+    self.myLayer.frame = CGRectMake(50, 110, 80, 80);
+    self.myLayer.cornerRadius = 2;
     UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
-    myLayer.contents = (id)image.CGImage;
-    [self.view.layer addSublayer:myLayer];
+    self.myLayer.contents = (id)image.CGImage;
+    [self.view.layer addSublayer:self.myLayer];
     // Rotate over Z axis
     CABasicAnimation *myRotateAnimation  = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     myRotateAnimation .fromValue = [NSNumber numberWithFloat:0.0];
     myRotateAnimation .toValue = [NSNumber numberWithFloat:2.0 * M_PI];
     myRotateAnimation .duration = 5;
     myRotateAnimation .repeatCount = NSNotFound;
-    [myLayer addAnimation:myRotateAnimation  forKey:@"myRotate"];
+    [self.myLayer addAnimation:myRotateAnimation  forKey:@"myRotate"];
     
 }
 
@@ -55,12 +81,12 @@
 - (void)myScale
 
 {
-    CALayer *myScaleLayer = [CALayer layer];
-    myScaleLayer.frame = CGRectMake(190, 110, 80, 80);
-    myScaleLayer.cornerRadius = 2;
+    self.myScaleLayer = [CALayer layer];
+    self.myScaleLayer.frame = CGRectMake(190, 110, 80, 80);
+    self.myScaleLayer.cornerRadius = 2;
     UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
-    myScaleLayer.contents = (id)image.CGImage;
-    [self.view.layer addSublayer:myScaleLayer];
+    self.myScaleLayer.contents = (id)image.CGImage;
+    [self.view.layer addSublayer:self.myScaleLayer];
  
     CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     scaleAnimation.fromValue = [NSNumber numberWithFloat:0.0];
@@ -69,7 +95,7 @@
     scaleAnimation.autoreverses = YES;
     scaleAnimation.repeatCount = NSNotFound;
     scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    [myScaleLayer addAnimation:scaleAnimation forKey:@"myScale"];
+    [self.myScaleLayer addAnimation:scaleAnimation forKey:@"myScale"];
 }
 
 
@@ -78,46 +104,46 @@
 - (void)myMove
 {
     
-    CALayer *myMoveLayer = [[CALayer alloc]init];
-    myMoveLayer.frame = CGRectMake(50, 255, 80, 80);
+    self.myMoveLayer = [[CALayer alloc]init];
+    self.myMoveLayer.frame = CGRectMake(50, 255, 80, 80);
     UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
-    myMoveLayer.contents = (id)image.CGImage;
-    myMoveLayer.cornerRadius = 2;
-    [self.view.layer addSublayer:myMoveLayer];
+    self.myMoveLayer.contents = (id)image.CGImage;
+    self.myMoveLayer.cornerRadius = 2;
+    [self.view.layer addSublayer:self.myMoveLayer];
     // move Animation
     CABasicAnimation *animation  = [CABasicAnimation animationWithKeyPath:@"position"];
-    CGPoint fromPoint = myMoveLayer.position;
+    CGPoint fromPoint = self.myMoveLayer.position;
     fromPoint.x-=50;
     fromPoint.y-=40;
     animation.fromValue = [NSValue valueWithCGPoint:fromPoint];
-    CGPoint toPoint = myMoveLayer.position;
+    CGPoint toPoint = self.myMoveLayer.position;
     toPoint.x += 180;
     toPoint.y += 40;
     animation.toValue = [NSValue valueWithCGPoint:toPoint];
     animation.autoreverses = YES;
     animation.duration = 3;
     animation.repeatCount = NSNotFound;
-    [myMoveLayer addAnimation:animation forKey:@"myMove"];
+    [self.myMoveLayer addAnimation:animation forKey:@"myMove"];
     
 }
 
 
 - (void)myCombine{
     
-    CALayer *myCombineLayer = [CALayer layer];
-    myCombineLayer.frame = CGRectMake(50, 420, 80, 80);
-    myCombineLayer.cornerRadius = 2;
+    self.myCombineLayer = [CALayer layer];
+    self.myCombineLayer.frame = CGRectMake(50, 420, 80, 80);
+    self.myCombineLayer.cornerRadius = 2;
     UIImage *image = [UIImage imageNamed:@"OSU-LOGO.png"];
-    myCombineLayer.contents = (id)image.CGImage;
-    [self.view.layer addSublayer:myCombineLayer];
+    self.myCombineLayer.contents = (id)image.CGImage;
+    [self.view.layer addSublayer:self.myCombineLayer];
     
     // move position
     CABasicAnimation *moveAnimation  = [CABasicAnimation animationWithKeyPath:@"position"];
-    CGPoint fromPoint = myCombineLayer.position;
+    CGPoint fromPoint = self.myCombineLayer.position;
     fromPoint.x-=80;
     fromPoint.y-=10;
     moveAnimation.fromValue = [NSValue valueWithCGPoint:fromPoint];
-    CGPoint toPoint = myCombineLayer.position;
+    CGPoint toPoint = self.myCombineLayer.position;
     toPoint.x += 110;
     toPoint.y += 10;
     moveAnimation.toValue = [NSValue valueWithCGPoint:toPoint];
@@ -142,7 +168,7 @@
     animationCombine.autoreverses = YES;
     animationCombine.repeatCount = NSNotFound;
     [animationCombine setAnimations:[NSArray arrayWithObjects:rotationAnimation, scaleAnimation,moveAnimation, nil]];
-    [myCombineLayer addAnimation:animationCombine forKey:@"animationCombine"];
+    [self.myCombineLayer addAnimation:animationCombine forKey:@"animationCombine"];
 }
 
 
