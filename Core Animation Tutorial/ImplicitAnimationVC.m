@@ -9,6 +9,7 @@
 #import "ImplicitAnimationVC.h"
 
 @interface ImplicitAnimationVC ()
+@property (weak, nonatomic) IBOutlet UISwitch *mySwitch;
 
 @end
 

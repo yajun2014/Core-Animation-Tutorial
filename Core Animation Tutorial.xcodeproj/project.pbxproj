@@ -11,6 +11,11 @@
 		E624A6BB1A2E6AA1001265E7 /* SimpleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E624A6BA1A2E6AA1001265E7 /* SimpleVC.m */; };
 		E624A6BE1A2E71E3001265E7 /* OSU-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6BD1A2E71E3001265E7 /* OSU-logo.png */; };
 		E624A6C21A2F9C24001265E7 /* ImplicitAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E624A6C11A2F9C24001265E7 /* ImplicitAnimationVC.m */; };
+		E624A6C81A2FAC5D001265E7 /* Change Corner.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6C31A2FAC5D001265E7 /* Change Corner.png */; };
+		E624A6C91A2FAC5D001265E7 /* Change Opacity.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6C41A2FAC5D001265E7 /* Change Opacity.png */; };
+		E624A6CB1A2FAC5D001265E7 /* Change Size.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6C61A2FAC5D001265E7 /* Change Size.png */; };
+		E624A6CC1A2FAC5D001265E7 /* Move Postion.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6C71A2FAC5D001265E7 /* Move Postion.png */; };
+		E624A6CE1A2FAD24001265E7 /* Change Color.png in Resources */ = {isa = PBXBuildFile; fileRef = E624A6CD1A2FAD24001265E7 /* Change Color.png */; };
 		E6A4138F1A2E2A96009E0333 /* BasicAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */; };
 		E6A413941A2E2B09009E0333 /* AdvancedAnimationContorller.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A413931A2E2B09009E0333 /* AdvancedAnimationContorller.m */; };
 		E6AB46EF1A2E170F00B0DDB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AB46EE1A2E170F00B0DDB6 /* Foundation.framework */; };
@@ -48,6 +53,11 @@
 		E624A6BD1A2E71E3001265E7 /* OSU-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OSU-logo.png"; sourceTree = "<group>"; };
 		E624A6C01A2F9C24001265E7 /* ImplicitAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationVC.h; sourceTree = "<group>"; };
 		E624A6C11A2F9C24001265E7 /* ImplicitAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationVC.m; sourceTree = "<group>"; };
+		E624A6C31A2FAC5D001265E7 /* Change Corner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Change Corner.png"; sourceTree = "<group>"; };
+		E624A6C41A2FAC5D001265E7 /* Change Opacity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Change Opacity.png"; sourceTree = "<group>"; };
+		E624A6C61A2FAC5D001265E7 /* Change Size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Change Size.png"; sourceTree = "<group>"; };
+		E624A6C71A2FAC5D001265E7 /* Move Postion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Move Postion.png"; sourceTree = "<group>"; };
+		E624A6CD1A2FAD24001265E7 /* Change Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Change Color.png"; sourceTree = "<group>"; };
 		E6A4138D1A2E2A96009E0333 /* BasicAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationContorller.h; sourceTree = "<group>"; };
 		E6A4138E1A2E2A96009E0333 /* BasicAnimationContorller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationContorller.m; sourceTree = "<group>"; };
 		E6A413921A2E2B09009E0333 /* AdvancedAnimationContorller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedAnimationContorller.h; sourceTree = "<group>"; };
@@ -110,6 +120,11 @@
 		E624A6BC1A2E71D0001265E7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E624A6CD1A2FAD24001265E7 /* Change Color.png */,
+				E624A6C31A2FAC5D001265E7 /* Change Corner.png */,
+				E624A6C41A2FAC5D001265E7 /* Change Opacity.png */,
+				E624A6C61A2FAC5D001265E7 /* Change Size.png */,
+				E624A6C71A2FAC5D001265E7 /* Move Postion.png */,
 				E624A6BD1A2E71E3001265E7 /* OSU-logo.png */,
 			);
 			name = Images;
@@ -300,9 +315,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E624A6BE1A2E71E3001265E7 /* OSU-logo.png in Resources */,
+				E624A6C81A2FAC5D001265E7 /* Change Corner.png in Resources */,
+				E624A6CB1A2FAC5D001265E7 /* Change Size.png in Resources */,
+				E624A6C91A2FAC5D001265E7 /* Change Opacity.png in Resources */,
 				E6AB47071A2E170F00B0DDB6 /* Images.xcassets in Resources */,
 				E6AB46F91A2E170F00B0DDB6 /* InfoPlist.strings in Resources */,
 				E6AB47021A2E170F00B0DDB6 /* Main.storyboard in Resources */,
+				E624A6CC1A2FAC5D001265E7 /* Move Postion.png in Resources */,
+				E624A6CE1A2FAD24001265E7 /* Change Color.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

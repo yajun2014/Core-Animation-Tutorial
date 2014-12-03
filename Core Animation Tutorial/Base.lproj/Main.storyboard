@@ -76,12 +76,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rD6-NE-0pF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507" y="-1360"/>
+            <point key="canvasLocation" x="576" y="-1438"/>
         </scene>
-        <!--S2-->
+        <!-- Implicit Animation-->
         <scene sceneID="flO-0q-97X">
             <objects>
-                <viewController id="5LR-Q1-KJh" sceneMemberID="viewController">
+                <viewController id="5LR-Q1-KJh" customClass="ImplicitAnimationVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d9y-Re-q7T"/>
                         <viewControllerLayoutGuide type="bottom" id="6fZ-tg-I7w"/>
@@ -90,17 +90,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="s2" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-PA-BGc">
-                                <rect key="frame" x="54" y="248" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMV-cr-Kow">
-                                <rect key="frame" x="60" y="372" width="175" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcj-E7-KLM">
+                                <rect key="frame" x="16" y="448" width="120" height="32"/>
+                                <state key="normal" image="Change Size.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysv-WX-kRv">
+                                <rect key="frame" x="167" y="448" width="120" height="32"/>
+                                <state key="normal" image="Change Corner.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eL-v3-6ak">
+                                <rect key="frame" x="167" y="299" width="120" height="32"/>
+                                <state key="normal" image="Change Opacity.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="redraw" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqo-tt-pbz">
+                                <rect key="frame" x="88" y="371" width="120" height="32"/>
+                                <state key="normal" image="Change Color.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRM-Wp-ahw">
+                                <rect key="frame" x="16" y="299" width="120" height="32"/>
+                                <state key="normal" image="Move Postion.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap8-wo-6YD">
+                                <rect key="frame" x="44" y="228" width="126" height="21"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Sub Layers Transforms">
+                                    <fragment content="Show Animation">
                                         <attributes>
-                                            <color key="NSColor" red="0.13128301401703102" green="0.082723994899796427" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.030772174015662124" green="0.034288095654480877" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
@@ -108,14 +133,20 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSU-Le-cw9">
+                                <rect key="frame" x="184" y="223" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="S2" id="G9Y-nq-7F4"/>
+                    <navigationItem key="navigationItem" title=" Implicit Animation" id="G9Y-nq-7F4"/>
+                    <connections>
+                        <outlet property="mySwitch" destination="tSU-Le-cw9" id="mox-pI-NcN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2g-HI-B5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061" y="-1332"/>
+            <point key="canvasLocation" x="1043" y="-1438"/>
         </scene>
         <!--Basic Animation-->
         <scene sceneID="Xjc-zk-u7w">
@@ -262,6 +293,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMV-cr-Kow">
+                                <rect key="frame" x="61" y="143" width="175" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Sub Layers Transforms">
+                                        <attributes>
+                                            <color key="NSColor" red="0.13128301401703102" green="0.082723994899796427" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -329,6 +373,13 @@
             <point key="canvasLocation" x="431" y="405"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Change Color.png" width="161" height="39"/>
+        <image name="Change Corner.png" width="176" height="39"/>
+        <image name="Change Opacity.png" width="184" height="39"/>
+        <image name="Change Size.png" width="146" height="39"/>
+        <image name="Move Postion.png" width="164" height="38"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
