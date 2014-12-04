@@ -324,7 +324,7 @@
             </objects>
             <point key="canvasLocation" x="1146" y="1285"/>
         </scene>
-        <!--ReflectionVC-->
+        <!--Reflecton-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ReflectionVC" sceneMemberID="viewController">
@@ -337,7 +337,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GtF-rT-s61"/>
+                    <navigationItem key="navigationItem" title="Reflecton" id="GtF-rT-s61"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

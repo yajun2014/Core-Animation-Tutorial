@@ -24,8 +24,8 @@
     self.basicAnimationList = [NSMutableArray arrayWithCapacity:5];
     self.detailAnimationList = [NSMutableArray arrayWithCapacity:5];
     
-    NSArray *myArray =@[@"Simple Animation",@"Implicit Animation",@"picturs"];
-    NSArray *myDetailArray =@[@"Rotate,Scale,Move and Combine Animation",@"Change position, opacity,color,size and corner",@"picturs"];
+    NSArray *myArray =@[@"Simple Animation",@"Implicit Animation",@"Reflection"];
+    NSArray *myDetailArray =@[@"Rotate,Scale,Move and Combine Animation",@"Change position, opacity,color,size and corner",@"Show Great Wall reflection"];
     
     self.basicAnimationList = [NSMutableArray arrayWithArray:myArray];
     self.detailAnimationList = [NSMutableArray arrayWithArray:myDetailArray];
