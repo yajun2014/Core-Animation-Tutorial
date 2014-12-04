@@ -7,12 +7,8 @@
 //
 #import <QuartzCore/QuartzCore.h>
 #import "ViewController.h"
-#import "ZBLayoutLayer.h"
+
 
 @interface CAKeyframeAnimationVC : ViewController
-
-{	ZBLayoutLayer *spot;
-    CGMutablePathRef path;
-CGMutablePathRef _path;}
 
 @end
