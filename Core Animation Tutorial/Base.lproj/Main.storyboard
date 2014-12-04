@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rD6-NE-0pF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576" y="-1438"/>
+            <point key="canvasLocation" x="113" y="-1271"/>
         </scene>
         <!-- Implicit Animation-->
         <scene sceneID="flO-0q-97X">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2g-HI-B5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="-1438"/>
+            <point key="canvasLocation" x="513" y="-1271"/>
         </scene>
         <!--Basic Animation-->
         <scene sceneID="Xjc-zk-u7w">
@@ -203,11 +203,32 @@
                         <segue destination="B21-tV-Z8L" kind="push" identifier="s0" id="GGf-bl-nJ6"/>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="s2" id="lvU-zn-ShG"/>
                         <segue destination="5LR-Q1-KJh" kind="push" identifier="s1" id="Ya0-Rv-2AE"/>
+                        <segue destination="yyI-2G-ugM" kind="push" identifier="s3" id="xDq-dR-r4x"/>
+                        <segue destination="mhj-P7-Hjo" kind="push" identifier="s4" id="RMC-MU-5Ka"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Muc-v3-HH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="-465"/>
+            <point key="canvasLocation" x="833" y="-485"/>
+        </scene>
+        <!--sub-->
+        <scene sceneID="wAf-5N-Bd0">
+            <objects>
+                <viewController id="mhj-P7-Hjo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c9k-XL-AKX"/>
+                        <viewControllerLayoutGuide type="bottom" id="AWd-nj-Std"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cg8-GF-Yte">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="sub" id="vb8-SI-gAR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQc-at-bEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="-485"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SQx-xJ-zQ2">
@@ -240,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ng0-so-fd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165" y="-75"/>
+            <point key="canvasLocation" x="1484" y="369"/>
         </scene>
         <!--Advanced Animation-->
         <scene sceneID="aYK-JX-Mfm">
@@ -341,7 +362,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165" y="-720"/>
+            <point key="canvasLocation" x="949" y="-1271"/>
+        </scene>
+        <!--CAKeyframeAnimation-->
+        <scene sceneID="389-dv-PTO">
+            <objects>
+                <viewController id="yyI-2G-ugM" customClass="CAKeyframeAnimationVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N9b-Lz-dx8"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ql-OE-59y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="btK-bj-HHW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CAKeyframeAnimation" id="pjK-Dw-cpS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oji-F0-t5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="-1266"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DQh-6e-CG8">

@@ -24,17 +24,12 @@
     self.basicAnimationList = [NSMutableArray arrayWithCapacity:5];
     self.detailAnimationList = [NSMutableArray arrayWithCapacity:5];
     
-    NSArray *myArray =@[@"Simple Animation",@"Implicit Animation",@"Reflection"];
-    NSArray *myDetailArray =@[@"Rotate,Scale,Move and Combine Animation",@"Change position, opacity,color,size and corner",@"Show Great Wall reflection"];
+    NSArray *myArray =@[@"Simple Animation",@"Implicit Animation",@"Reflection",@"CAKeyframeAnimation",@"sub"];
+    NSArray *myDetailArray =@[@"Rotate,Scale,Move and Combine Animation",@"Change position, opacity,color,size and corner",@"Show Great Wall reflection",@"Arbitrary path anitmation",@"sub"];
     
     self.basicAnimationList = [NSMutableArray arrayWithArray:myArray];
     self.detailAnimationList = [NSMutableArray arrayWithArray:myDetailArray];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,6 +75,20 @@
     {
         [self performSegueWithIdentifier:@"s2" sender:self];
     }
+    
+    
+    else if (indexPath.row==3)
+        
+    {
+        [self performSegueWithIdentifier:@"s3" sender:self];
+    }
+    
+    else if (indexPath.row==4)
+        
+    {
+        [self performSegueWithIdentifier:@"s4" sender:self];
+    }
+    
     
     
 }
