@@ -12,6 +12,7 @@
 @interface CAKeyframeAnimationVC : ViewController
 
 {	ZBLayoutLayer *spot;
-    CGMutablePathRef path;}
+    CGMutablePathRef path;
+CGMutablePathRef _path;}
 
 @end
